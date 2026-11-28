@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0a1228"/>
+      <stop offset="100%" stop-color="#02040a"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0088ff"/>
+    </linearGradient>
+    <linearGradient id="goldSpeed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb703"/>
+      <stop offset="100%" stop-color="#fb8500"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="108" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="104" fill="none" stroke="#00f0ff" stroke-width="4" stroke-opacity="0.3"/>
+
+  <!-- Speed Lines Background -->
+  <path d="M 40 160 L 472 160" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.15" stroke-dasharray="16, 12"/>
+  <path d="M 30 200 L 482 200" stroke="#00f0ff" stroke-width="3" stroke-opacity="0.25" stroke-dasharray="24, 16"/>
+  <path d="M 20 240 L 492 240" stroke="#00f0ff" stroke-width="4" stroke-opacity="0.35" stroke-dasharray="32, 20"/>
+  <path d="M 40 360 L 472 360" stroke="#fb8500" stroke-width="2" stroke-opacity="0.2" stroke-dasharray="20, 16"/>
+
+  <!-- Outer Neon Hex Ring -->
+  <polygon points="256,48 440,154 440,366 256,472 72,366 72,154" fill="none" stroke="url(#neonCyan)" stroke-width="6" filter="url(#glow)" opacity="0.8"/>
+
+  <!-- Supercar Body Silhouette -->
+  <!-- Rear Wing / Spoiler -->
+  <path d="M 110 260 L 150 210 L 210 210 L 170 260 Z" fill="#00f0ff" filter="url(#glow)"/>
+  <rect x="135" y="215" width="242" height="12" rx="6" fill="#00f0ff" filter="url(#glow)"/>
+
+  <!-- Main Chassis -->
+  <path d="M 120 290 
+           C 160 270, 200 240, 260 230 
+           C 330 220, 390 250, 430 285 
+           C 445 298, 440 315, 410 320 
+           L 380 320 
+           C 370 290, 330 290, 320 320 
+           L 200 320 
+           C 190 290, 150 290, 140 320 
+           L 100 320 
+           C 90 315, 95 300, 120 290 Z" 
+        fill="url(#neonCyan)" filter="url(#glow)"/>
+
+  <!-- Cockpit Glass (Windshield & Roof) -->
+  <path d="M 210 245 
+           L 260 238 
+           L 320 250 
+           L 350 280 
+           L 220 280 Z" 
+        fill="#050814" stroke="#00f0ff" stroke-width="3"/>
+
+  <!-- Wheels with Neon Rims -->
+  <!-- Front Wheel -->
+  <circle cx="350" cy="320" r="38" fill="#0b0f19" stroke="#00f0ff" stroke-width="7" filter="url(#glow)"/>
+  <circle cx="350" cy="320" r="20" fill="#ffb703"/>
+  <circle cx="350" cy="320" r="8" fill="#ffffff"/>
+
+  <!-- Rear Wheel -->
+  <circle cx="170" cy="320" r="38" fill="#0b0f19" stroke="#00f0ff" stroke-width="7" filter="url(#glow)"/>
+  <circle cx="170" cy="320" r="20" fill="#ffb703"/>
+  <circle cx="170" cy="320" r="8" fill="#ffffff"/>
+
+  <!-- Headlight Beam -->
+  <polygon points="420,295 490,285 490,325 410,315" fill="url(#neonCyan)" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- Exhaust Nitro Flame -->
+  <polygon points="100,305 40,300 70,315 45,325 100,318" fill="url(#goldSpeed)" filter="url(#glow)"/>
+
+  <!-- Typography / Badge -->
+  <text x="256" y="420" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">
+    NEON 3D
+  </text>
+  <text x="256" y="450" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#00f0ff" text-anchor="middle" letter-spacing="6">
+    UZBEKISTAN TOUR
+  </text>
+</svg>
